@@ -1,0 +1,277 @@
+$icon-font-path: '../fonts/';
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// bower:scss
+
+// endbower
+
+@import "components/variables";
+@import "components/animation";
+@import "components/mixins";
+
+.fs body {
+	font-family: $font-family-base;	
+}
+
+.fs header {
+	
+	background: url("/images/cover.jpg");
+	width: $base-bigblock-width-height;
+	height: $bigblock-height;
+	background-size: cover;
+	overflow: hidden;
+		
+	div.point-background {
+		background-color: rgba(44, 62, 80, 0.3);
+	    background-image: url("/images/pattern.png");
+	    background-repeat: repeat;
+	    height: $base-bigblock-width-height;
+	    width: $base-bigblock-width-height;
+	}
+
+	.self-presentation {
+		@include block-absolute;
+		color: $first-main-color;
+	    text-align: $align-content;
+    	top: 50%;
+    	width: 100%;
+	}
+	
+	h1 {
+		font-size: $font-size-h1;
+		font-weight: $font-weight-big;
+		letter-spacing: $letter-spacing-base;
+		margin-bottom: $margin-base;	
+	}
+	
+	p:first-child {
+		margin-top: $margin-small;
+	}
+	
+	p {
+		font-size: $font-size-p;
+	}
+	
+	div.container {
+		padding: 21% 0%;
+	}
+
+	div.arrow-down-animation {
+		@include block-absolute;
+		border: 2px solid $first-main-color;
+		border-radius: $border-radius-max;
+		width: 50px;
+		height: 50px;
+		display: inline-block;
+	    left: 50%;
+	    bottom: 40px;
+	    text-align: $align-content;
+	    margin: -15px;
+	}
+	
+	span.arrow-down {
+		color: $first-main-color;
+    	font-size: $font-size-base;
+    	position: relative;
+		animation-name: drop;
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+		animation-play-state: running;
+	}
+
+	@keyframes drop {
+	    0%   { top:0px;  opacity: 0;}
+		30%  { top:10px; opacity: 1;}
+		100% { top:25px; opacity: 0;}
+	}
+}
+
+.fs .navbar.navbar-default {
+
+	background-color: $first-main-color;
+	border: 0;
+	margin: 0;
+
+	a {
+		font-size: $font-size-base / 1.3;
+    	letter-spacing: $letter-spacing-base;
+
+    	&:hover {
+    		color: $link-hover-color;
+    	}
+	}
+
+	a.name-of-developer {
+		font-size: $font-size-base / 0.8;
+	    font-weight: bold;
+	    letter-spacing: $letter-spacing-base * 2;
+	}
+}
+
+.fs div.skills {
+	
+	background: #F5F5F5;
+
+	div.container {
+		padding: 100px 0;
+	}
+
+	h2 {
+		@include h2-style; 
+	}
+
+	p {
+    	font-size: $font-size-base;
+	}
+
+	div.skills-unit {
+		text-align: $align-content;
+		background: $first-main-color;
+		padding: 40px 30px;
+	}
+
+	div.row {
+		margin: 50px 0 0 0;
+	}
+
+	i {
+		font-size: $font-size-base * 2.1;
+	}
+
+	.horisontal-line {
+		width: 100px;
+		margin: 0 auto;
+
+		hr {
+			border-top: 1px solid #BEBEBE;
+		}
+	}
+
+	.selfpresentation-text {
+		@include wrapper-short-presentation-article;
+	}
+
+	.selfpresentation-text p {
+		@include short-presentation-article;
+	}
+
+	h4 {
+		font-size: $font-size-base;
+	    font-weight: bold;
+	    letter-spacing: $letter-spacing-base;
+	    margin: 30px 0 20px 0;
+	}
+}
+
+.fs .portfolio {
+
+	.container {
+	    padding: 100px 0;
+	}
+
+	.row {
+		margin: 50px 0 0 0;
+	}
+
+	h2 {
+		@include h2-style; 
+	}
+
+	.selfpresentation-text p {
+		@include short-presentation-article;
+	}
+
+	.selfpresentation-text {
+		@include wrapper-short-presentation-article;
+	}
+
+	.col-lg-4 {
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+	.img-item {
+		width: 100%;
+	}
+
+	p.pop-up-text {
+		color: $first-main-color;
+		text-align: $align-content;
+		margin: 0;
+    	padding: 20px 2.5em;
+	    transition: opacity 0.35s, transform 0.35s;
+	    transform: translate3d(0,20px,0);
+	}
+
+	.img-logo-project {
+		cursor: pointer;
+		position: relative;
+		background: #9e5406;
+	}
+
+	h5 {
+		color: $first-main-color;
+		font-size: $font-size-base / 0.7;
+		letter-spacing: $letter-spacing-base * 2;
+		text-align: $align-content;
+		margin: 0;
+	    padding-top: 10%;
+	    transition: transform 0.35s;
+	    transform: translate3d(0,-20px,0);
+	}
+
+	h5:hover {
+		transition: transform 0.35s;
+	    transform: translate3d(0,-20px,0);
+	}
+
+	span.thick-font {
+		color: $first-main-color;
+		letter-spacing: $letter-spacing-base / 0.6;
+		font-weight: bold;
+	}
+
+	div.frame {
+		position: absolute;
+	    top: 0;
+	    padding: 2em;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	div.frame:before {
+		border-top: 1px solid #fff;
+    	border-bottom: 1px solid #fff;
+    	transform: scale(0,1);
+	}
+
+	div.frame:after {
+		border-right: 1px solid #fff;
+	    border-left: 1px solid #fff;
+	    transform: scale(1,0);
+	} 
+
+	div.img-logo-project:hover div.frame:after, div.img-logo-project:hover div.frame:before  {
+		opacity: 1;
+    	transform: scale(1);
+	}
+
+	div.img-logo-project div.frame:after, div.img-logo-project div.frame:before {
+		position: absolute;
+	    top: 30px;
+	    right: 30px;
+	    bottom: 30px;
+	    left: 30px;
+	    content: '';
+	    transition: opacity 0.35s, transform 0.35s;
+	}
+
+	div.img-logo-project:hover img {
+		opacity: 0.4;
+	}
+
+	div.img-logo-project img {
+		opacity: 0.7;
+		transition: opacity 0.35s;
+	}
+}

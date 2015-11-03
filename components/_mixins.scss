@@ -1,0 +1,22 @@
+@mixin block-absolute {
+	position: absolute;
+}
+
+@mixin h2-style {
+	font-weight: bolder;
+   	letter-spacing: $letter-spacing-base * 2;
+   	text-align: $align-content;
+}
+
+@mixin short-presentation-article {
+	font-size: $font-size-base / 0.8;
+	line-height: 1.7em;
+	text-align: $align-content;
+	color: #666;
+}
+
+@mixin wrapper-short-presentation-article {
+	width: 540px;
+	margin: 0 auto;
+	height: auto;
+}
